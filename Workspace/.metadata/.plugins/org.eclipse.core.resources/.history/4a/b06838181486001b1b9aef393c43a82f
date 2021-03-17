@@ -1,0 +1,15 @@
+package com;
+
+
+public class AccountStore {
+
+	public int storeAccountInfo(int accno,String name, float amount) {
+		try {
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

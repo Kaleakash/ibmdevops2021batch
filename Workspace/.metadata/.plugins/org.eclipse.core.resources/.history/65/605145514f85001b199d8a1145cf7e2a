@@ -1,0 +1,47 @@
+package testing;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.EmployeeService;
+
+public class EmployeeServiceTest {
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("This method call only once before all test start");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("This method call only once after test finished..");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Before every test method");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("After every test method");
+	}
+
+	@Test
+	public void testCalSalary() {
+		EmployeeService es = new EmployeeService();
+		float updatedSalary = es.calSalary(100,"Raj", 45000, "Manager");
+		assertEquals(50000, updatedSalary, 0.0);
+	}
+
+	@Test
+	public void testSayHello() {
+		fail("Not yet implemented");
+	}
+
+}

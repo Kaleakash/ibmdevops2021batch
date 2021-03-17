@@ -1,0 +1,14 @@
+package testing;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculationTest {
+
+	@Test			// annotation : It is konw as meta-data. Data about data. 
+	public void testAdd() {
+		//fail("Not yet implemented");
+	}
+
+}

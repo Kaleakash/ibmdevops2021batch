@@ -1,0 +1,8 @@
+package com;
+
+public class EmployeeService {
+
+	public float calSalary(int id, String name,float salary, String desg) {
+		
+	}
+}
