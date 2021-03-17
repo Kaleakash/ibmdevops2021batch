@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function display() {    //no passing parameter and no return type.
+        alert("Welcome to user defined function")
+    }
+    function addNumber(a,b) {   // passing parameter but no return type.
+           var sum = a+b;
+           alert("Sum of two number is "+sum) 
+    }
+    function sayHello(name){    // passing parameter and return the value. 
+        return "Welcome to user defined functions "+name;
+    }
+    </script>
+</head>
+<body>
+    <script type="text/JavaScript">
+    display();
+    addNumber(100,200);
+    var msg = sayHello("Ravi");
+    alert("In Main script "+msg);
+    </script>
+</body>
+</html>
