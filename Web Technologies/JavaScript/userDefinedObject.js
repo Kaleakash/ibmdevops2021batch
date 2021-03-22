@@ -98,8 +98,8 @@ function Employee(id,name,salary){
             document.write("<br/>salary is "+this.salary);
         }
 }
-function Manager(numberOfEmp) {
-        //Employee.call(id,name,salary);  //passing value to employee
+function Manager(id,name,salary,numberOfEmp) {
+        Employee.call(this,id,name,salary);  //passing value to employee
         this.numberOfEmp = numberOfEmp;
         this.displayMgr= function() {
             document.write("<br> Number of employee working under him "+this.numberOfEmp);
@@ -111,7 +111,9 @@ function Programmer(projectName) {
             document.write("<br/>Project Name is "+this.projectName);
         }
 }
-
+var mgr1 = new Manager(100,"Ravi",12000,12);
+mgr1.displayEmployee();
+mgr1.displayMgr();
 //Prototype level inheritance. 
 /*
 document.write("<br/>Employee employee details through employee object<br/>")

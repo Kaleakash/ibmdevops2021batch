@@ -1,0 +1,1 @@
+//copy from one file to another file using fs module
