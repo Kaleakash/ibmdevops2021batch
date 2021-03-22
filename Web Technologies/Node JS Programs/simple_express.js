@@ -1,6 +1,9 @@
 var express = require("express");   // load the module 
+var bodyParser = require("body-parser");    //load the module 
 var app = express();        // creating the instance of that module 
 // default path 
+
+app.use(bodyParser.urlencoded({extended:false}));   //enable body data.
 app.get("/",(req,res)=>{
 
     res.send("Welcome to Node JS Express module with default path ");
@@ -18,14 +21,28 @@ app.get("/contactus",(req,res)=>{
 });
 
 app.get("/checkUser",(req,res)=>{
-        var user = req.query["user"];
-        var pass = req.query["pass"];
+        var user = req.query["user"];   //url 
+        var pass = req.query["pass"];   //url
         if(user=="Ajay" && pass=="Kumar"){
             res.send("Successfully Login")
         }else {
             res.send("Failure try once again");
         }
 });
+
+app.post("/checkUser",(req,res)=> {
+    //res.send("Post method called...")
+        var user = req.body.user;    //body part
+        var pass = req.body.pass;
+        console.log(user);
+        console.log(pass);
+
+        if(user=="Ajay" && pass=="Kumar"){
+            res.send("Successfully Login")
+        }else {
+            res.send("Failure try once again");
+        }
+})
 
 app.get("/login",(req,res)=>{
     res.sendFile(__dirname+"\\login.html");
